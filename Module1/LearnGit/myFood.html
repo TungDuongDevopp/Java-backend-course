@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ẩm thực yêu thích - Tùng Dương chia sẻ những món ăn ngon nhất mà anh ấy từng thưởng thức.">
+  <title>Ẩm Thực | My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">TungDev</a>
+      <ul class="nav-links">
+        <li><a href="index.html">🏠 Trang chủ</a></li>
+        <li><a href="AboutMe.html">👤 Về tôi</a></li>
+        <li><a href="myCV.html">📄 CV</a></li>
+        <li><a href="myFood.html" class="active">🍜 Ẩm thực</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main>
+    <!-- Page Header -->
+    <div class="page-header fade-in fade-in-delay-1">
+      <div class="page-tag">Food & Drinks</div>
+      <h1 class="page-title">Ẩm thực <span>yêu thích</span> 🍜</h1>
+      <p class="page-subtitle">Những món ăn khiến tôi không thể cưỡng lại — từ đặc sản Việt Nam đến ẩm thực quốc tế.</p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="food-filter fade-in fade-in-delay-2">
+      <button class="filter-btn active" onclick="filterFood('all', this)">🍽️ Tất cả</button>
+      <button class="filter-btn" onclick="filterFood('viet', this)">🇻🇳 Việt Nam</button>
+      <button class="filter-btn" onclick="filterFood('asian', this)">🌏 Châu Á</button>
+      <button class="filter-btn" onclick="filterFood('drink', this)">🥤 Đồ uống</button>
+      <button class="filter-btn" onclick="filterFood('dessert', this)">🍮 Tráng miệng</button>
+    </div>
+
+    <!-- Food Grid -->
+    <div class="food-grid fade-in fade-in-delay-3" id="foodGrid">
+
+      <!-- Phở -->
+      <div class="food-card" data-category="viet">
+        <div class="food-img" style="background: linear-gradient(135deg, #1a1a2e, #16213e);">🍲</div>
+        <div class="food-body">
+          <div class="food-category">🇻🇳 Việt Nam</div>
+          <div class="food-name">Phở bò Hà Nội</div>
+          <div class="food-desc">Tô phở với nước dùng ninh hàng chục tiếng, bánh phở dai mềm và thịt bò hoa cúc mỏng tan — không gì thay thế được!</div>
+          <div class="food-tags">
+            <span class="food-tag">Súp</span>
+            <span class="food-tag">Truyền thống</span>
+            <span class="food-tag">Sáng</span>
+          </div>
+          <div class="food-rating">⭐⭐⭐⭐⭐ <span style="color:var(--text-muted)">Hoàn hảo!</span></div>
+        </div>
+      </div>
+
+      <!-- Bún bò -->
+      <div class="food-card" data-category="viet">
+        <div class="food-img" style="background: linear-gradient(135deg, #2d1b0e, #4a2c14);">🍜</div>
+        <div class="food-body">
+          <div class="food-category">🇻🇳 Việt Nam</div>
+          <div class="food-name">Bún bò Huế</div>
+          <div class="food-desc">Hương vị đậm đà, cay nồng của bún bò xứ Huế — nước dùng đỏ màu sả ớt, thịt bò giò heo mềm tan.</div>
+          <div class="food-tags">
+            <span class="food-tag">Cay</span>
+            <span class="food-tag">Miền Trung</span>
+          </div>
+          <div class="food-rating">⭐⭐⭐⭐⭐ <span style="color:var(--text-muted)">Yêu thích!</span></div>
+        </div>
+      </div>
+
+      <!-- Bánh mì -->
+      <div class="food-card" data-category="viet">
+        <div class="food-img" style="background: linear-gradient(135deg, #2e1a06, #5c3a12);">🥖</div>
+        <div class="food-body">
+          <div class="food-category">🇻🇳 Việt Nam</div>
+          <div class="food-name">Bánh mì Sài Gòn</div>
+          <div class="food-desc">Chiếc bánh mì giòn tan với pate, thịt nguội, dưa leo, rau thơm và tương ớt — món ăn đường phố huyền thoại.</div>
+          <div class="food-tags">
+            <span class="food-tag">Đường phố</span>
+            <span class="food-tag">Nhanh</span>
+          </div>
+          <div class="food-rating">⭐⭐⭐⭐ <span style="color:var(--text-muted)">Tuyệt vời</span></div>
+        </div>
+      </div>
+
+      <!-- Ramen -->
+      <div class="food-card" data-category="asian">
+        <div class="food-img" style="background: linear-gradient(135deg, #1a0e1a, #2d1a2d);">🍱</div>
+        <div class="food-body">
+          <div class="food-category">🌏 Nhật Bản</div>
+          <div class="food-name">Ramen Tonkotsu</div>
+          <div class="food-desc">Nước dùng xương heo đục sánh, mì ramen dai mềm, trứng ajitsuke và thịt chashu tan chảy trong miệng.</div>
+          <div class="food-tags">
+            <span class="food-tag">Nhật Bản</span>
+            <span class="food-tag">Mì</span>
+          </div>
+          <div class="food-rating">⭐⭐⭐⭐⭐ <span style="color:var(--text-muted)">Đỉnh cao!</span></div>
+        </div>
+      </div>
+
+      <!-- Bingsu -->
+      <div class="food-card" data-category="dessert">
+        <div class="food-img" style="background: linear-gradient(135deg, #0e1a2d, #1a2d4a);">🍧</div>
+        <div class="food-body">
+          <div class="food-category">🍮 Tráng miệng</div>
+          <div class="food-name">Bingsu đào Hàn Quốc</div>
+          <div class="food-desc">Đá bào mịn như tuyết, topping đào tươi, nước đường thơm và sữa đặc — giải nhiệt hoàn hảo cho ngày hè.</div>
+          <div class="food-tags">
+            <span class="food-tag">Hàn Quốc</span>
+            <span class="food-tag">Mát lạnh</span>
+          </div>
+          <div class="food-rating">⭐⭐⭐⭐ <span style="color:var(--text-muted)">Rất ngon</span></div>
+        </div>
+      </div>
+
+      <!-- Cà phê -->
+      <div class="food-card" data-category="drink">
+        <div class="food-img" style="background: linear-gradient(135deg, #1a0e06, #3d1f0a);">☕</div>
+        <div class="food-body">
+          <div class="food-category">🥤 Đồ uống</div>
+          <div class="food-name">Cà phê trứng Hà Nội</div>
+          <div class="food-desc">Đặc sản thủ đô — lòng đỏ trứng đánh bông mịn phủ lên cà phê đậm đà, tạo nên hương vị không nơi nào có.</div>
+          <div class="food-tags">
+            <span class="food-tag">Cà phê</span>
+            <span class="food-tag">Hà Nội</span>
+            <span class="food-tag">Độc đáo</span>
+          </div>
+          <div class="food-rating">⭐⭐⭐⭐⭐ <span style="color:var(--text-muted)">Phải thử!</span></div>
+        </div>
+      </div>
+
+      <!-- Gỏi cuốn -->
+      <div class="food-card" data-category="viet">
+        <div class="food-img" style="background: linear-gradient(135deg, #0e1a0e, #1a331a);">🥗</div>
+        <div class="food-body">
+          <div class="food-category">🇻🇳 Việt Nam</div>
+          <div class="food-name">Gỏi cuốn tôm thịt</div>
+          <div class="food-desc">Bánh tráng mỏng cuộn tôm, thịt, bún, rau thơm và chấm nước lạc — nhẹ nhàng, thanh mát và đầy dinh dưỡng.</div>
+          <div class="food-tags">
+            <span class="food-tag">Lành mạnh</span>
+            <span class="food-tag">Cuộn</span>
+          </div>
+          <div class="food-rating">⭐⭐⭐⭐ <span style="color:var(--text-muted)">Rất thích</span></div>
+        </div>
+      </div>
+
+      <!-- Trà sữa -->
+      <div class="food-card" data-category="drink">
+        <div class="food-img" style="background: linear-gradient(135deg, #1a0e26, #2d1a40);">🧋</div>
+        <div class="food-body">
+          <div class="food-category">🥤 Đồ uống</div>
+          <div class="food-name">Trà sữa trân châu đường đen</div>
+          <div class="food-desc">Trà đậm, sữa tươi béo ngậy kết hợp trân châu đường đen dẻo dai — cơn nghiện không thể cưỡng lại!</div>
+          <div class="food-tags">
+            <span class="food-tag">Trà sữa</span>
+            <span class="food-tag">Trân châu</span>
+          </div>
+          <div class="food-rating">⭐⭐⭐⭐ <span style="color:var(--text-muted)">Yêu thích</span></div>
+        </div>
+      </div>
+
+      <!-- Dimsum -->
+      <div class="food-card" data-category="asian">
+        <div class="food-img" style="background: linear-gradient(135deg, #1a1209, #332414);">🥟</div>
+        <div class="food-body">
+          <div class="food-category">🌏 Trung Quốc</div>
+          <div class="food-name">Dimsum hấp Quảng Đông</div>
+          <div class="food-desc">Há cảo, siu mai, bánh cuốn tôm hấp — lớp vỏ mỏng trong bọc nhân tươi ngon, ăn kèm trà Pu-erh.</div>
+          <div class="food-tags">
+            <span class="food-tag">Trung Quốc</span>
+            <span class="food-tag">Hấp</span>
+          </div>
+          <div class="food-rating">⭐⭐⭐⭐ <span style="color:var(--text-muted)">Tuyệt</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Fun Fact Banner -->
+    <div class="card fade-in fade-in-delay-4" style="text-align:center; background: linear-gradient(135deg, rgba(108,99,255,0.15), rgba(76,201,240,0.1)); border-color: rgba(108,99,255,0.3);">
+      <div style="font-size: 3rem; margin-bottom: 1rem;">🍜</div>
+      <h2 style="font-family:'Playfair Display',serif; font-size:1.5rem; margin-bottom:0.75rem;">Ẩm thực là ngôn ngữ chung</h2>
+      <p style="color:var(--text-muted); max-width: 600px; margin: 0 auto 1.5rem;">
+        Tôi tin rằng thức ăn không chỉ là để no bụng — đó là văn hóa, là ký ức, là cách kết nối con người với nhau.
+        Mỗi món ăn đều kể một câu chuyện! 🌏
+      </p>
+      <a href="AboutMe.html" class="btn btn-primary">Tìm hiểu thêm về tôi 👤</a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 TungDev · Được tạo với ❤️ trong khoá học <a href="index.html">Code Gym</a></p>
+  </footer>
+
+  <script>
+    function filterFood(category, btn) {
+      // Update active button
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Filter cards
+      const cards = document.querySelectorAll('.food-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'block';
+          card.style.animation = 'fadeInUp 0.4s ease forwards';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
