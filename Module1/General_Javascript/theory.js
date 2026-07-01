@@ -1,8 +1,7 @@
-let ten;
-let tuoi;
+let name;
+let age;
 
-ten = prompt("Mời bạn nhập tên:")
-tuoi = parseInt(prompt("Mời bạn nhập tuổi"));
+name = prompt("Mời bạn nhập tên: ")
+age = parseInt(prompt("Mời bạn nhập tuổi"));
 
-document.writeln("Tên của bạn là: ",ten,"<br>");
-document.writeln("Tuổi của bạn là: ",tuoi)
+document.writeln(`Tên của bạn: ${name}, Tuổi của bạn: ${age}`);
