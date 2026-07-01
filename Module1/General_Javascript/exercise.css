@@ -1,0 +1,10 @@
+.calculation{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 400px;
+    align-items: center;
+}
+button{
+    max-width: 80px;
+}
