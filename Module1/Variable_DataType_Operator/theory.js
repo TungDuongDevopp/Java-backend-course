@@ -20,3 +20,5 @@ console.log(typeof isSick)
 
 //Khi chuỗi thực hiện ngoài dấu + đều chuyển thành số
 
+// Toán tử so sánh == , === ,!=,!==,>=,<=
+
