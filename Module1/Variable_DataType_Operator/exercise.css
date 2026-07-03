@@ -1,0 +1,46 @@
+body{
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+}
+.calculation{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    width: 100%;
+    max-width: 120px; /* Tăng nhẹ để vừa text */
+    height: 40px; /* Dùng height thay vì max-height để cố định form */
+    padding: 0 12px; /* Tạo khoảng trống chữ bên trong */
+    font-size: 14px;
+    border-radius: 6px; /* Bo góc mềm mại hơn */
+    border: 1.5px solid #8282ea;
+    background-color: #ffffff;
+    color: #333333;
+    outline: none;
+    transition: all 0.3s ease; /* Hiệu ứng mượt mà */
+}
+
+
+
+button {
+    width: 100%;
+    max-width: 100px;
+    height: 40px;
+    padding: 0 16px;
+    font-size: 14px;
+    font-weight: 600; /* Chữ đậm nhìn chuyên nghiệp hơn */
+    color: white;
+    background: #8282ea;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer; /* Biến con trỏ chuột thành hình bàn tay */
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(130, 130, 234, 0.3); /* Đổ bóng nhẹ */
+}
+
+
