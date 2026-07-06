@@ -141,9 +141,7 @@ main {
   padding: 4rem 2rem;
 }
 
-/* =============================================
-   HERO SECTION (index.html)
-   ============================================= */
+
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
