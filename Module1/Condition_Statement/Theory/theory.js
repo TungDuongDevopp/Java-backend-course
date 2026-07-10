@@ -22,7 +22,7 @@ ketqua = (grade > 5)? "Đậu" : "Trượt";
 console.log(ketqua);
 
 // Switch case
-let date = parseInt(prompt("Xin nhập thứ trong tuần"));
+let day = parseInt(prompt("Xin nhập thứ trong tuần"));
 switch (day){
     case 1: console.log("Đây là chủ nhật");
     break;
