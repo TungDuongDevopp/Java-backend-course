@@ -2,7 +2,7 @@ let a,b;
 do{
     a = parseInt(prompt("Mời bạn nhập 1 số nguyên dương  a bất kỳ "));
     b = parseInt(prompt("Mời bạn nhập 1 số nguyên dương  b bất kỳ "));
-}while (a<=0 || a>=b )
+}while (a<=0 || a>=b || isNaN(a) ||isNaN(b))
 let sumOdd = 0;
 let sumEven = 0;
 for(i = a;i<=b;i++){

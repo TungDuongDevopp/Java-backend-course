@@ -1,7 +1,7 @@
 let number;
 do{
     number = parseInt(prompt("Mời bạn nhập 1 số nguyên dương bất kỳ "));
-}while (number<=0)
+}while (isNaN(number)&&number<=0)
 
 let f0 = 0;
 let f1 = 1;
