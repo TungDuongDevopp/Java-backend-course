@@ -54,17 +54,19 @@ for(let i of nums){
 console.log("Số phần tử chia hết cho 5 là: ",count);
 console.log("Trung bình cộng các số chia hết cho 5: ",sum5 / count);4
 //YC11 Chỉ dùng 1 vòng lặp tìm phần tử lớn thứ 2 của mảng
-console.log("Phần tử lớn thứ 2 của mảng: ",findKthLargest(nums,2));
+let maxValue = Number.MIN_SAFE_INTEGER;
+let secondMax = Number.MIN_SAFE_INTEGER;
+for (let num of nums) {
+    if (num > maxValue) {
+        secondMax = maxValue;
+        maxValue = num;
+    }
+    else if (num > secondMax && num < maxValue) { secondMax = num; }
+}
+console.log("Phần tử lớn thứ 2 là:", secondMax);
 
 // Tạo hàm hiển thị phần tử thỏa mãn số chia một số ra dư
 function isDevisibleEqualMod (devident ,devisor,mod){
     if(devident % devisor == mod) return true;
     return false;
-}
-// Tạo hàm tìm phần tử thứ k lớn nhất
-function findKthLargest(arr, k) {
-    // Sắp xếp mảng giảm dần
-    arr.sort((a, b) => b - a);
-    // Trả về phần tử lớn thứ k (chỉ số là k-1)
-    return arr[k - 1];
 }
