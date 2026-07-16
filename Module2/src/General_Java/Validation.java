@@ -46,5 +46,13 @@ public class Validation {
     public static double getNumber(String message, boolean isInteger) {
         return getNumber(message, -Double.MAX_VALUE, Double.MAX_VALUE, isInteger); // Gọi lại hàm gốc
     }
+    public static String getString(String message){
+        String input;
+        do{
+            System.out.println(message);
+            input = sc.nextLine();
+        } while (input.isBlank()|| input==null);
+        return input;
+    }
 }
 
