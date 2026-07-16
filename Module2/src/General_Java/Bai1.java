@@ -1,5 +1,5 @@
 package General_Java;
-
+import utils.Validation;
 public class Bai1 {
     public static void main(String[] args) {
         double width,height,area,perimeter;

@@ -1,7 +1,5 @@
-package General_Java;
-
+package utils;
 import java.util.Scanner;
-
 public class Validation {
     private static final Scanner sc = new Scanner(System.in);
 

@@ -1,7 +1,6 @@
 package General_Java;
 
-import java.util.Scanner;
-
+import utils.Validation;
 public class Bai2 {
     public static void main(String[] args) {
         int a;

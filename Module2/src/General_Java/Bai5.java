@@ -1,5 +1,5 @@
 package General_Java;
-
+import utils.Validation;
 public class Bai5 {
     public static void main(String[] args) {
         int a,b;
