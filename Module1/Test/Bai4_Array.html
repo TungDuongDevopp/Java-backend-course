@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        let diemLop = [7, 9, 4, 8, 6, 10, 3, 5];
+        console.log(`Số lượng học viên trong lớp: ${diemLop.length}`);
+        let sum = 0;
+        let count = 0;
+        let minScore = diemLop[0];
+        let maxScore = diemLop[0];
+        for(let i of diemLop){
+            sum+=i;
+            if(i< minScore){
+                minScore = i;
+            }
+            if(i>maxScore){
+                maxScore = i;
+            }
+            if(i>=5){
+                count++;
+            }
+        }
+        console.log(`Tổng điểm của lớp: ${sum}`);
+        console.log(`Điểm trung bình cuả lớp: ${sum/diemLop.length}`);
+        console.log(`Điểm cao nhất trong lớp là: ${maxScore}`);
+        console.log(`Điểm thấp nhất trong lớp là: ${minScore}`);
+        console.log(`Số học sinh có điểm >=5 trong lớp là: ${count}`);
+
+    </script>
+</body>
+</html>
