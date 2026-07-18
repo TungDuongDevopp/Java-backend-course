@@ -1,4 +1,4 @@
-package Loop_Structure;
+package loop;
 
 import java.util.Arrays;
 

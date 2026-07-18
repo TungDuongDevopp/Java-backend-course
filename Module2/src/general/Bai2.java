@@ -1,4 +1,4 @@
-package General_Java;
+package general;
 
 import utils.Validation;
 public class Bai2 {
