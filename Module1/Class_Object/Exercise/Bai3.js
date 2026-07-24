@@ -5,13 +5,8 @@ class Rectangle {
         this.setSize(width,height);
     }
     setSize(width,height){
-            if(width<0) this.#width = 0;
-            if (height<0) this.#height = 0;
-
-        else{
-            this.#height = height;
-            this.#width = width;
-        }
+        this.#width = width < 0 ? 0 : width;
+        this.#height = height < 0 ? 0 : height;
 
     }
     getArea(){
